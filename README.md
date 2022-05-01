@@ -29,8 +29,8 @@ If the output is 1, then the led glows.
 ### 
 Program:
 ```
-Developed by: 
-RegisterNumber:  
+Developed by: J.Archana priya 
+RegisterNumber:  212221230007.
 
 Full Adder:
 
