@@ -20,14 +20,6 @@ Full adder is a digital circuit used to calculate the sum of three binary bits. 
 
 Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = AB + ACin + BCin
 
- ![image](https://user-images.githubusercontent.com/36288975/163552156-a13e5a56-c638-4110-97d9-8896907c8d25.png)
-
-#### Figure -01 HALF ADDER 
-
-
-![image](https://user-images.githubusercontent.com/36288975/163552057-b3547877-6d07-45b4-b7e0-bcfebfad9e1d.png)
-
-#### Figure -02 FULL ADDER 
 
 ### Procedure
 
@@ -36,19 +28,42 @@ Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
 Program:
-/*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+```
 Developed by: 
 RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
 
+Full Adder:
+
+module Exp02DE(a,b,c,carry,sum);
+input a,b,c;
+output sum,carry;
+assign sum=((a^b)^c);
+assign carry=((a&b)|(b&c)|(c&a));
+endmodule
+
+Half Adder:
+
+module Exp02DE2(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor (sum,a,b);
+and (carry,a,b);
+endmodule
+```
 ### Output:
-### RTL
-### TIMING DIAGRAM
 
+### RTL
+![digi201](./digi201.png)
+![digi202](./digi202.png)
+
+
+### TIMING DIAGRAM 
+![digi0021](./dg0021.png)
+![digi0022](./dg0022.png)
 
 ### TRUTH TABLE 
+![Full adder-Copy.png](./Full%20adder%20-%20Copy.png)
+![Half adder](./Half%20adder.png)
 
 ### Result:
+A half adder and full adder circuit and verify its truth table in Quartus using Verilog programming has been successfully designed.
